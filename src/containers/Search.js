@@ -3,6 +3,12 @@ import { connect } from "react-redux";
 
 import getUrls from "../actions/getUrls";
 
+const mapStateToProps = state => {
+  return {
+    buttonText: state.buttonText
+  };
+};
+
 const mapDispatchToProps = dispatch => {
   return {
     getUrls: word => {
@@ -11,6 +17,6 @@ const mapDispatchToProps = dispatch => {
   };
 };
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Serach);
