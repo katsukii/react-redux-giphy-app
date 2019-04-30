@@ -17,3 +17,8 @@ render(
   </Provider>,
   rootElement
 );
+
+import giphyAPI from "./APIs/giphyAPI";
+giphyAPI("cat").then(res => {
+  console.log(res.data);
+});
