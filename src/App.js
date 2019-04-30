@@ -1,13 +1,15 @@
 import React from "react";
 
 import ImageList from "./containers/ImageList";
-import Serach from "./components/Search";
+
+// components から containers へ変更
+import Search from "./containers/Search";
 
 const App = () => {
   return (
     <div>
       App
-      <Serach />
+      <Search />
       <ImageList />
     </div>
   );

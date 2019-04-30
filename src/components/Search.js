@@ -1,4 +1,5 @@
 import React from "react";
+import getUrls from "../actions/getUrls";
 
 class Search extends React.Component {
   constructor(props) {
@@ -23,8 +24,11 @@ class Search extends React.Component {
   };
 
   handleSubmit = event => {
+    // connect で与えられたメソッドを受け取る
+    const { getUrls } = this.props;
     event.preventDefault();
-    //this.props.addTodo(this.state.title);
+    // 使用する
+    getUrls(this.state.title);
     this.setState({ title: "" });
   };
 }

@@ -21,6 +21,3 @@ render(
   </Provider>,
   rootElement
 );
-
-import getUrls from "./actions/getUrls";
-store.dispatch(getUrls("cat"));
