@@ -10,6 +10,8 @@ import { Provider } from "react-redux";
 
 import rootReducer from "./reducers";
 
+import "./App.css";
+
 const middleWares = [thunk];
 
 const store = createStore(rootReducer, applyMiddleware(...middleWares));
